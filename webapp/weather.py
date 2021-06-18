@@ -13,7 +13,7 @@ def weather_by_city(lat, lon):
         'appid': current_app.config["WEATHER_API_KEY"]
     }
     try:
-        result = requests.get(weather_url, params = params)
+        result = requests.get(weather_url, params=params)
         result.raise_for_status()
         weather = result.json()
 
